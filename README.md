@@ -1,25 +1,22 @@
-[![GitHub license](https://img.shields.io/github/license/99xt/emojicpp)](https://github.com/99xt/emojicpp/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/99xt/emojicpp)](https://github.com/99xt/emojicpp/issues)
-[![GitHub stars](https://img.shields.io/github/stars/99xt/emojicpp)](https://github.com/99xt/emojicpp/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/99xt/emojicpp)](https://github.com/99xt/emojicpp/network)
-[![GitHub last commit](https://img.shields.io/github/last-commit/99xt/emojicpp)](https://img.shields.io/github/last-commit/99xt/emojicpp)
-
 # emojicpp
 
-This program will convert emoji codes in strings to unicode emojis. 
+[![GitHub license](https://img.shields.io/github/license/emmaexe/emojicpp)](https://github.com/emmaexe/emojicpp/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/emmaexe/emojicpp)](https://github.com/emmaexe/emojicpp/issues)
+[![GitHub stars](https://img.shields.io/github/stars/emmaexe/emojicpp)](https://github.com/emmaexe/emojicpp/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/emmaexe/emojicpp)](https://github.com/emmaexe/emojicpp/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/emmaexe/emojicpp)](https://img.shields.io/github/last-commit/emmaexe/emojicpp)
 
+This program will convert emoji codes in strings to unicode emojis.
 
 ```c++
-emojicpp::emojize("Hello World! :earth_africa") 
+emojicpp::emojize("Hello World! :earth_africa:")
 ```
 
-**Output**
-
+**Output:**
 
 > Hello World! 🌍
 
-
-**Example program**
+**Example program:**
 
 ```c++
 #include <iostream>
@@ -31,14 +28,14 @@ int main() {
 }
 ```
 
-**How To Run Example**
-```
-$ chmod +x run.sh
-$ ./run.sh
+**How To Run Example:**
+
+```sh
+chmod +x run.sh
+./run.sh
 ```
 
-Supported Emojis
-------------------
+## Supported Emojis
 
 | Code          | Emoji     |
 | ------------- | --------- |
@@ -1093,8 +1090,8 @@ Supported Emojis
 
 ### License
 
-Distributed under the MIT [License](https://github.com/99xt/emojicpp/blob/master/LICENSE). 
+Distributed under the MIT [License](https://github.com/emmaexe/emojicpp/blob/master/LICENSE).
 
 ### Contributors
 
-![Repository Contributors](https://contrib.rocks/image?repo=phoebe-leong/emojicpp)
+![Repository Contributors](https://contrib.rocks/image?repo=emmaexe/emojicpp)
