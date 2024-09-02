@@ -25,11 +25,6 @@ target_sources(
     PRIVATE src/emoji.cpp
 )
 
-target_compile_features(
-    emojicpp
-    PUBLIC cxx_std_17
-)
-
 target_include_directories(
     emojicpp
     PRIVATE src
