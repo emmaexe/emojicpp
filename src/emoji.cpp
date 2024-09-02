@@ -1,7 +1,7 @@
 #include <emojicpp/emoji.hpp>
 
 namespace emojicpp {
-    std::unordered_map<std::string, std::string> emoji::emojiMap = {
+    std::unordered_map<std::string, std::string> emoji::map = {
         {":admission_tickets:" , u8"\U0001F39F"},
         {":aerial_tramway:" , u8"\U0001F6A1"},
         {":airplane:" , u8"\U00002708"},
@@ -1069,8 +1069,8 @@ namespace emojicpp {
                         continue;
                     }
                     std::unordered_map<std::string, std::string>::iterator it;
-                    it = emojiMap.find(str.substr(index, textEmojiLen));
-                    if (it == emojiMap.end()) {
+                    it = map.find(str.substr(index, textEmojiLen));
+                    if (it == map.end()) {
                         index = i;
                         continue;
                     }

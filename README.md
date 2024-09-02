@@ -9,7 +9,7 @@
 This program will convert emoji codes in strings to unicode emojis.
 
 ```c++
-emojicpp::emojize("Hello World! :earth_africa:")
+emojicpp::emoji::parse("Hello World! :earth_africa:")
 ```
 
 **Output:**
@@ -20,19 +20,55 @@ emojicpp::emojize("Hello World! :earth_africa:")
 
 ```c++
 #include <iostream>
-#include "emoji.h"
+#include <emojicpp/emoji.hpp>
 
 int main() {
-    std::cout << emojicpp::emojize("Emoji :smile: for c++ :+1:") << std::endl;
+    std::cout << emojicpp::emoji::parse("Emoji :smile: for c++ :+1:") << std::endl;
     return 0;
 }
 ```
 
-**How To Run Example:**
+You can access the map that holds the emoji codes using ``emojicpp::emoji::map``.
 
-```sh
-chmod +x run.sh
-./run.sh
+## Usage guide
+
+The recommended way to include this in your project is using [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake):
+
+```CMake
+# Init CPM (see the CPM docs for more info):
+file(
+    DOWNLOAD
+    https://github.com/cpm-cmake/CPM.cmake/releases/download/v0.40.2/CPM.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake
+    EXPECTED_HASH SHA256=c8cdc32c03816538ce22781ed72964dc864b2a34a310d3b7104812a5ca2d835d
+)
+include(${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
+
+# Add emojicpp:
+CPMAddPackage("gh:emmaexe/emojicpp@2.0.0")
+include_directories("${emojicpp_SOURCE_DIR}")
+```
+
+You can also build the project and install it to your system to use that way.
+
+Static build:
+
+```bash
+cmake -S . -B build
+cmake --build build
+```
+
+Dynamic build:
+
+```bash
+cmake -S . -B build -DBUILD_SHARED_LIBS=ON
+cmake --build build
+```
+
+Install:
+
+```bash
+cmake --install build
 ```
 
 ## Supported Emojis
