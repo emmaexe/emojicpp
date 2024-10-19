@@ -75,9 +75,10 @@ install(
 include(CMakePackageConfigHelpers)
 
 write_basic_package_version_file(
-    "emojicppConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/emojicppConfigVersion.cmake"
     VERSION ${PROJECT_VERSION}
-    COMPATIBILITY SameMajorVersion)
+    COMPATIBILITY SameMajorVersion
+)
 
 configure_package_config_file(
     "${CMAKE_CURRENT_LIST_DIR}/cmake/emojicppConfig.cmake.in"
@@ -89,5 +90,11 @@ install(
     EXPORT emojicppTargets
     FILE emojicppTargets.cmake
     NAMESPACE emojicpp::
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/cmake/emojicpp
+)
+
+install(
+    FILES "${CMAKE_CURRENT_BINARY_DIR}/emojicppConfig.cmake"
+          "${CMAKE_CURRENT_BINARY_DIR}/emojicppConfigVersion.cmake"
     DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/cmake/emojicpp
 )
