@@ -16,7 +16,7 @@ add_custom_command(
     DEPENDS
         "${CMAKE_CURRENT_SOURCE_DIR}/src/header.gperf"
         "${CMAKE_CURRENT_SOURCE_DIR}/src/emoji.gperf"
-    COMMENT "Genrating main gperf file"
+    COMMENT "Generating main gperf file"
     VERBATIM
 )
 
