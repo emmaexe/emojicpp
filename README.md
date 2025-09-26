@@ -1,7 +1,7 @@
 # emojicpp
 
 [![GitHub License](https://img.shields.io/github/license/emmaexe/emojicpp)](https://github.com/emmaexe/emojicpp/blob/main/LICENSE)
-[![GitHub Tag](https://img.shields.io/github/v/tag/emmaexe/ntfyDesktop?label=Latest%20stable%20version)](https://github.com/emmaexe/emojicpp/releases/latest)
+[![GitHub Tag](https://img.shields.io/github/v/tag/emmaexe/emojicpp?label=Latest%20stable%20version)](https://github.com/emmaexe/emojicpp/releases/latest)
 
 A library for parsing emoji names into emoji.
 
