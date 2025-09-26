@@ -1,14 +1,20 @@
 #pragma once
 
-#include <emojicpp/export_emojicpp.hpp>
 #include <string>
-#include <unordered_map>
 
 namespace emojicpp {
-    class EMOJICPP_EXPORT emoji {
+    class emoji {
         public:
             emoji() = delete;
-            static std::string parse(std::string str, bool escape = true);
-            static std::unordered_map<std::string, std::string> map;
+            emoji(const emoji&) = delete;
+            emoji& operator=(const emoji&) = delete;
+
+            /**
+             * @brief Parses a string by replacing emoji names (in the `:name:` format) with emoji characters
+             *
+             * @param string The string being parsed
+             * @return std::string - The parsed string
+             */
+            static std::string parse(std::string_view string);
     };
 } // namespace emojicpp
