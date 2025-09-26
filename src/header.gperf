@@ -1,0 +1,12 @@
+%language=C++
+%define hash-function-name hash
+%define lookup-function-name lookup
+%define class-name internal
+%readonly-tables
+%compare-strncmp
+%includes
+%struct-type
+
+struct Entry { const char* name; const char8_t* value; };
+
+%%
